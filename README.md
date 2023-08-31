@@ -1,5 +1,3 @@
-# portfolio_vtwo
-
 # 20 React: React Portfolio
 
 ## Your Task
@@ -207,3 +205,13 @@ You are required to submit BOTH of the following for review:
 ---
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
