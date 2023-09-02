@@ -47,10 +47,17 @@ function MaybeResume() {
     return (
         <div>
             <div style={styles.mainContainer}>
-                <Columns>
+            <Columns>
                     <Columns.Column size={4} offset={4}>
                         <h1 style={styles.title}>
-                            This is to Contact Me!
+                            This is my Resume Page!
+                        </h1>
+                    </Columns.Column>
+                </Columns>
+                <Columns>
+                    <Columns.Column size={6} offset={3}>
+                        <h1 style={styles.text}>
+                            This is to read more more about my skills!
                         </h1>
                     </Columns.Column>
                 </Columns>

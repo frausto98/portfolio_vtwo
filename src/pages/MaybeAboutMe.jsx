@@ -64,11 +64,15 @@ function MaybeAboutMe() {
                 </Columns>
 
                 <Columns>
-                    <Columns.Column size={6} offset={3}>
+                    <Columns.Column size={4} offset={4}>
                         <p style={styles.paragraph}>
                            To those who will be taking the time to read this section, and explore my portfolio, I thank you. 
                            <br></br>
+                            <br></br>
                             My name is Adrian Pablo Frausto, and I am an aspiring Full Stack Web Developer. I am currently enrolled in the UC Berekley -  EdX Coding Bootcamp, and I hope to learn new skills, improve my skills, and gain experience in the field of Web Development. 
+                            <br></br>
+                            <br></br>
+                            While honing and using these skills, my goal is do be able to develop a website that will help people in some way. I want to be able to use my skills to help others, and to make a difference in the world.
                         </p>
                     </Columns.Column>
                 </Columns>
