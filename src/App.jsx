@@ -1,31 +1,34 @@
 // import './App.css';
 import { useState } from 'react';
 import Header from './components/header';
+import Footer from './components/Footer';
 import MaybeAboutMe from './pages/MaybeAboutMe';
 import MaybeContact from './pages/MaybeContact';
+import MaybeResume from './pages/MaybeResume';
+import PortfolioPage from './pages/portfolio';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [item, setItem] = useState('hello')
+  
+  const [page, setPage] = useState('portfolio')
   const foods = ['pizza', 'burgers', 'chicken']
 
   function display() {
-    if (item === 'hello') {
+    if (page === 'about me') {
       return (<MaybeAboutMe />)
-    } else if (item === 'goodbye') {
+    } else if (page === 'contact') {
       return (<MaybeContact/>)
-    } else {
-
-      return (foods.map(item=> (
-        <h2>{item}</h2>
-      )))
+    } else if (page === 'resume'){ 
+      return (<MaybeResume/>)
+    } else if (page === 'portfolio'){
+      return (<PortfolioPage/>)
     }
   }
+
   return (
     <div className="portfolio-app">
-      <Header count={count} setCount={setCount} setItem={setItem}/>
-      <h1>{count}</h1>
+      <Header setPage={setPage}/>
       {display()}
+      <Footer/>
     </div>
   );
 }
