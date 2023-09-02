@@ -87,7 +87,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./assets/images/firstProj.png'
+                                    src='./src/images/firstProj.png'
                                 />
                             </Block>
                             <Block>
@@ -110,7 +110,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./assets/images/projectImage.png'
+                                    src='./src/images/projectImage.png'
                                 />
                             </Block>
                             <Block>
@@ -133,7 +133,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./assets/images/portfolioOne.png'
+                                    src='./src/images/portfolioOne.png'
                                 />
                             </Block>
                             <Block>
@@ -158,7 +158,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./assets/images/pwGen.png'
+                                    src='./src/images/pwGen.png'
                                 />
                             </Block>
                             <Block>
@@ -181,7 +181,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./assets/images/CCSS.png'
+                                    src='./src/images/CCSS.png'
                                 />
                             </Block>
                             <Block>
@@ -204,7 +204,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./assets/images/dailyPlanner.png'
+                                    src='./src/images/dailyPlanner.png'
                                 />
                             </Block>
                             <Block>
