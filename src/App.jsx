@@ -6,10 +6,11 @@ import MaybeAboutMe from './pages/MaybeAboutMe';
 import MaybeContact from './pages/MaybeContact';
 import MaybeResume from './pages/MaybeResume';
 import PortfolioPage from './pages/portfolio';
+import 'bulma/css/bulma.min.css'
 
 function App() {
   
-  const [page, setPage] = useState('portfolio')
+  const [page, setPage] = useState('about me')
   const foods = ['pizza', 'burgers', 'chicken']
 
   function display() {
