@@ -5,7 +5,7 @@ import {FaLinkedin} from 'react-icons/fa';
 
 const styles = {
     footer: {
-        background: 'DodgerBlue',
+        background: 'white',
         height: 'fit-content',
         width: '100%',
         textAlign: 'center',
@@ -13,7 +13,7 @@ const styles = {
     },
 
     link:{
-        color: 'white',
+        color: 'dodgerblue',
     }
 }
 
@@ -22,8 +22,8 @@ function Footer() {
     return (
         <div style={styles.footer}>
             <span >
-            <a style={styles.link}><FaGithub/></a>
-            <a style={styles.link}><FaLinkedin/></a>
+            <a href="https://github.com/frausto98"style={styles.link}><FaGithub/></a>
+            <a href="https://www.linkedin.com/in/adrian-frausto-0941a624a"style={styles.link}><FaLinkedin/></a>
             </span>
         </div>
     );

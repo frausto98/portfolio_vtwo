@@ -16,11 +16,14 @@ const styles = {
     heading: {
         background: 'white',
         borderRadius: 15,
+        borderColor: 'dodgerblue',
+        borderStyle: 'solid',
+        borderWidth: '5px',
         minHeight: 50,
-        width: '14%',
+        width: 'fit-content',
         lineHeight: '50px',
         fontSize: '20px',
-        color: 'black',
+        color: 'dodgerblue',
         padding: '0 20px',
         textAlign: 'center',
     },
@@ -31,7 +34,15 @@ const styles = {
         padding: '0 0 0 900px',
     },
     mainContainer: {
-        background: 'DodgerBlue',
+        background: 'white',
+    },
+    oneButton: {
+        background: 'white',
+        borderRadius: 15,
+        borderColor: 'dodgerblue',
+        borderStyle: 'solid',
+        borderWidth: '2px',
+        color: 'dodgerblue',
     }
 
 };
@@ -53,24 +64,24 @@ function Header({ setPage }) {
                     <Button onClick={() => {
 
                         setPage('about me')
-                    }}>About Me</Button>
+                    }} style={styles.oneButton}>About Me</Button>
 
                     <Button
                         onClick={() => {
                             setPage('portfolio')
 
-                        }}>Portfolio</Button>
+                        }} style={styles.oneButton}>Portfolio</Button>
 
 
                     <Button onClick={() => {
 
                         setPage('resume')
-                    }}>Resume</Button>
+                    }} style={styles.oneButton}>Resume</Button>
 
                     <Button onClick={() => {
 
                         setPage('contact')
-                    }}>Contact</Button>
+                    }}  style={styles.oneButton}>Contact</Button>
                 </div>
 
 
