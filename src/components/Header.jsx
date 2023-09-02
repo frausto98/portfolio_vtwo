@@ -10,7 +10,7 @@ const styles = {
     card: {
         //margin: 20,
         padding: 20,
-        
+
         display: 'flex',
     },
     heading: {
@@ -25,7 +25,7 @@ const styles = {
         textAlign: 'center',
     },
     buttons: {
-        
+
         width: 'fit-content',
         height: 'fit-content',
         padding: '0 0 0 900px',
@@ -76,7 +76,7 @@ function Header({ setPage }) {
 
             </div>
         </div>
-            );
+    );
 }
 
-            export default Header;
+export default Header;
