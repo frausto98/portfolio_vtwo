@@ -7,6 +7,7 @@ import MaybeContact from './pages/MaybeContact';
 import MaybeResume from './pages/MaybeResume';
 import PortfolioPage from './pages/portfolio';
 import 'bulma/css/bulma.min.css'
+import Blackjack from './pages/blackjack';
 
 function App() {
   
@@ -22,6 +23,8 @@ function App() {
       return (<MaybeResume/>)
     } else if (page === 'portfolio'){
       return (<PortfolioPage/>)
+    }else{
+      return <> Error! </>
     }
   }
 

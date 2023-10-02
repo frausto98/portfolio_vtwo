@@ -1,4 +1,12 @@
 import { Box, Block, Image, Columns } from "react-bulma-components";
+import dailyPlanner from "../images/dailyPlanner.png"
+import firstProj from "../images/firstProj.png"
+import projectImage from "../images/projectImage.png"
+import portfolioOne from "../images/portfolioOne.png"
+import pwGen from "../images/pwGen.png"
+import ccSS from "../images/CCSS.png"
+
+
 
 const styles = {
     projects: {
@@ -87,7 +95,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./src/images/firstProj.png'
+                                    src={firstProj}
                                 />
                             </Block>
                             <Block>
@@ -110,7 +118,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./src/images/projectImage.png'
+                                    src={projectImage}
                                 />
                             </Block>
                             <Block>
@@ -133,7 +141,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./src/images/portfolioOne.png'
+                                    src={portfolioOne}
                                 />
                             </Block>
                             <Block>
@@ -158,7 +166,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./src/images/pwGen.png'
+                                    src={pwGen}
                                 />
                             </Block>
                             <Block>
@@ -181,7 +189,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./src/images/CCSS.png'
+                                    src={ccSS}
                                 />
                             </Block>
                             <Block>
@@ -204,7 +212,7 @@ function PortfolioPage() {
                             <Block>
                                 <Image
                                     size='128x256'
-                                    src='./src/images/dailyPlanner.png'
+                                    src={dailyPlanner}
                                 />
                             </Block>
                             <Block>

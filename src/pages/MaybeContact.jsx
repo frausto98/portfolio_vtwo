@@ -96,7 +96,7 @@ function MaybeContact() {
                 <Columns>
                     <Columns.Column size={6} offset={3}>
                         <h1 style={styles.text}>
-                            Simply fill out the form below and I will get back to you as soon as possible!
+                            Simply fill out the form below and I will get back to you as soon as possible! It will not actually work!!
                         </h1>
                     </Columns.Column>
                 </Columns>

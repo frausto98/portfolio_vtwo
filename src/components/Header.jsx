@@ -81,7 +81,9 @@ function Header({ setPage }) {
                     <Button onClick={() => {
 
                         setPage('contact')
-                    }}  style={styles.oneButton}>Contact</Button>
+                    }} style={styles.oneButton}>Contact</Button>
+
+                    
                 </div>
 
 
