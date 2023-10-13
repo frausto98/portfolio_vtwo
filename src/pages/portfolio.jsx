@@ -1,4 +1,6 @@
-import { Box, Block, Image, Columns } from "react-bulma-components";
+import { useState } from 'react';
+
+import { Box, Block, Image, Columns, Button} from "react-bulma-components";
 import dailyPlanner from "../images/dailyPlanner.png"
 import firstProj from "../images/firstProj.png"
 import projectImage from "../images/projectImage.png"
@@ -24,7 +26,7 @@ const styles = {
     mainContainer: {
         background: 'DodgerBlue',
         padding: '20px',
-        
+
     },
     title: {
         background: 'DodgerBlue',
@@ -66,6 +68,9 @@ const styles = {
 }
 
 function PortfolioPage() {
+
+    const [showContent, setShowContent] = useState(false);
+
     return (
         <>
             <div style={styles.mainContainer}>
@@ -103,7 +108,7 @@ function PortfolioPage() {
                                     Click here to go to my Deployed Application
                                 </a>
                                 <br></br>
-                                <a href="https://github.com/frausto98/prework-study-guide"style={styles.links}>
+                                <a href="https://github.com/frausto98/prework-study-guide" style={styles.links}>
                                     Click here to go to my GitHub Repository
                                 </a>
                             </Block>
@@ -126,7 +131,7 @@ function PortfolioPage() {
                                     Click here to go to my Deployed Application
                                 </a>
                                 <br></br>
-                                <a href="https://github.com/frausto98/vacationDestination"style={styles.links}>
+                                <a href="https://github.com/frausto98/vacationDestination" style={styles.links}>
                                     Click here to go to my GitHub Repository
                                 </a>
                             </Block>
@@ -149,7 +154,7 @@ function PortfolioPage() {
                                     Click here to go to my Deployed Application
                                 </a>
                                 <br></br>
-                                <a href="https://github.com/frausto98/module-02-repo"style={styles.links}>
+                                <a href="https://github.com/frausto98/module-02-repo" style={styles.links}>
                                     Click here to go to my GitHub Repository
                                 </a>
                             </Block>
@@ -170,11 +175,11 @@ function PortfolioPage() {
                                 />
                             </Block>
                             <Block>
-                                <a href="https://frausto98.github.io/prework-study-guide/prework-study-guide-starter/" style={styles.links}>
+                                <a href="https://frausto98.github.io/password-gen-repo/" style={styles.links}>
                                     Click here to go to my Deployed Application
                                 </a>
                                 <br></br>
-                                <a href="https://github.com/frausto98/prework-study-guide"style={styles.links}>
+                                <a href="https://github.com/frausto98/password-gen-repo" style={styles.links}>
                                     Click here to go to my GitHub Repository
                                 </a>
                             </Block>
@@ -193,11 +198,11 @@ function PortfolioPage() {
                                 />
                             </Block>
                             <Block>
-                                <a href="https://frausto98.github.io/prework-study-guide/prework-study-guide-starter/" style={styles.links}>
+                                <a href="https://culinary-connections-2a73fa545141.herokuapp.com" style={styles.links}>
                                     Click here to go to my Deployed Application
                                 </a>
                                 <br></br>
-                                <a href="https://github.com/frausto98/prework-study-guide"style={styles.links}>
+                                <a href="https://github.com/frausto98/culinary_connection" style={styles.links}>
                                     Click here to go to my GitHub Repository
                                 </a>
                             </Block>
@@ -216,11 +221,93 @@ function PortfolioPage() {
                                 />
                             </Block>
                             <Block>
-                                <a href="https://frausto98.github.io/prework-study-guide/prework-study-guide-starter/" style={styles.links}>
+                                <a href="https://frausto98.github.io/daily-planner/" style={styles.links}>
                                     Click here to go to my Deployed Application
                                 </a>
                                 <br></br>
-                                <a href="https://github.com/frausto98/prework-study-guide"style={styles.links}>
+                                <a href="https://github.com/frausto98/daily-planner" style={styles.links}>
+                                    Click here to go to my GitHub Repository
+                                </a>
+                            </Block>
+                        </Box>
+                    </Columns.Column>
+                </Columns>
+
+                <Button
+                    onClick={() => {
+                        setShowContent(true)
+                    }}> Click  Here to Reveal More!</Button>
+
+                    {/* ------------------------------------------------------------------ */}
+                
+
+                <Columns
+                    show={showContent}
+                    onHide={() => setShowContent(false)}
+                >
+                    <Columns.Column size={3} offset={1}>
+                        <Box style={styles.projects}>
+                            <Block>
+                                This text is above the image
+                            </Block>
+                            <Block>
+                                <Image
+                                    size='128x256'
+                                    src={pwGen}
+                                />
+                            </Block>
+                            <Block>
+                                <a href="https://frausto98.github.io/password-gen-repo/" style={styles.links}>
+                                    Click here to go to my Deployed Application
+                                </a>
+                                <br></br>
+                                <a href="https://github.com/frausto98/password-gen-repo" style={styles.links}>
+                                    Click here to go to my GitHub Repository
+                                </a>
+                            </Block>
+                        </Box>
+                    </Columns.Column>
+
+                    <Columns.Column size={4}>
+                        <Box style={styles.projects}>
+                            <Block>
+                                This text is above the image
+                            </Block>
+                            <Block>
+                                <Image
+                                    size='128x256'
+                                    src={ccSS}
+                                />
+                            </Block>
+                            <Block>
+                                <a href="https://culinary-connections-2a73fa545141.herokuapp.com" style={styles.links}>
+                                    Click here to go to my Deployed Application
+                                </a>
+                                <br></br>
+                                <a href="https://github.com/frausto98/culinary_connection" style={styles.links}>
+                                    Click here to go to my GitHub Repository
+                                </a>
+                            </Block>
+                        </Box>
+                    </Columns.Column>
+
+                    <Columns.Column size={3}>
+                        <Box style={styles.projects}>
+                            <Block>
+                                This text is above the image
+                            </Block>
+                            <Block>
+                                <Image
+                                    size='128x256'
+                                    src={dailyPlanner}
+                                />
+                            </Block>
+                            <Block>
+                                <a href="https://frausto98.github.io/daily-planner/" style={styles.links}>
+                                    Click here to go to my Deployed Application
+                                </a>
+                                <br></br>
+                                <a href="https://github.com/frausto98/daily-planner" style={styles.links}>
                                     Click here to go to my GitHub Repository
                                 </a>
                             </Block>
