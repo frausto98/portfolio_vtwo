@@ -236,15 +236,13 @@ function PortfolioPage() {
                 <Button
                     onClick={() => {
                         setShowContent(true)
-                    }}> Click  Here to Reveal More!</Button>
+                    }}> Click Me!</Button>
 
                     {/* ------------------------------------------------------------------ */}
                 
 
-                <Columns
-                    show={showContent}
-                    onHide={() => setShowContent(false)}
-                >
+                { showContent?  (
+                <Columns>
                     <Columns.Column size={3} offset={1}>
                         <Box style={styles.projects}>
                             <Block>
@@ -314,6 +312,9 @@ function PortfolioPage() {
                         </Box>
                     </Columns.Column>
                 </Columns>
+                ):(
+                    <h2> CLick button  to  reveal more! </h2>
+                )}
             </div>
         </>
     )
