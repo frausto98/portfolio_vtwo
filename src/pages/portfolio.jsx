@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Box, Block, Image, Columns, Button} from "react-bulma-components";
+import { Box, Block, Image, Columns, Button } from "react-bulma-components";
 import dailyPlanner from "../images/dailyPlanner.png"
 import firstProj from "../images/firstProj.png"
 import projectImage from "../images/projectImage.png"
@@ -238,81 +238,86 @@ function PortfolioPage() {
                         setShowContent(true)
                     }}> Click Me!</Button>
 
-                    {/* ------------------------------------------------------------------ */}
-                
+                <Button
+                    onClick={() => {
+                        setShowContent(false)
+                    }}> hide Me!</Button>
 
-                { showContent?  (
-                <Columns>
-                    <Columns.Column size={3} offset={1}>
-                        <Box style={styles.projects}>
-                            <Block>
-                                This text is above the image
-                            </Block>
-                            <Block>
-                                <Image
-                                    size='128x256'
-                                    src={pwGen}
-                                />
-                            </Block>
-                            <Block>
-                                <a href="https://frausto98.github.io/password-gen-repo/" style={styles.links}>
-                                    Click here to go to my Deployed Application
-                                </a>
-                                <br></br>
-                                <a href="https://github.com/frausto98/password-gen-repo" style={styles.links}>
-                                    Click here to go to my GitHub Repository
-                                </a>
-                            </Block>
-                        </Box>
-                    </Columns.Column>
+                {/* ------------------------------------------------------------------ */}
 
-                    <Columns.Column size={4}>
-                        <Box style={styles.projects}>
-                            <Block>
-                                This text is above the image
-                            </Block>
-                            <Block>
-                                <Image
-                                    size='128x256'
-                                    src={ccSS}
-                                />
-                            </Block>
-                            <Block>
-                                <a href="https://culinary-connections-2a73fa545141.herokuapp.com" style={styles.links}>
-                                    Click here to go to my Deployed Application
-                                </a>
-                                <br></br>
-                                <a href="https://github.com/frausto98/culinary_connection" style={styles.links}>
-                                    Click here to go to my GitHub Repository
-                                </a>
-                            </Block>
-                        </Box>
-                    </Columns.Column>
 
-                    <Columns.Column size={3}>
-                        <Box style={styles.projects}>
-                            <Block>
-                                This text is above the image
-                            </Block>
-                            <Block>
-                                <Image
-                                    size='128x256'
-                                    src={dailyPlanner}
-                                />
-                            </Block>
-                            <Block>
-                                <a href="https://frausto98.github.io/daily-planner/" style={styles.links}>
-                                    Click here to go to my Deployed Application
-                                </a>
-                                <br></br>
-                                <a href="https://github.com/frausto98/daily-planner" style={styles.links}>
-                                    Click here to go to my GitHub Repository
-                                </a>
-                            </Block>
-                        </Box>
-                    </Columns.Column>
-                </Columns>
-                ):(
+                {showContent ? (
+                    <Columns>
+                        <Columns.Column size={3} offset={1}>
+                            <Box style={styles.projects}>
+                                <Block>
+                                    This text is above the image
+                                </Block>
+                                <Block>
+                                    <Image
+                                        size='128x256'
+                                        src={pwGen}
+                                    />
+                                </Block>
+                                <Block>
+                                    <a href="https://frausto98.github.io/password-gen-repo/" style={styles.links}>
+                                        Click here to go to my Deployed Application
+                                    </a>
+                                    <br></br>
+                                    <a href="https://github.com/frausto98/password-gen-repo" style={styles.links}>
+                                        Click here to go to my GitHub Repository
+                                    </a>
+                                </Block>
+                            </Box>
+                        </Columns.Column>
+
+                        <Columns.Column size={4}>
+                            <Box style={styles.projects}>
+                                <Block>
+                                    This text is above the image
+                                </Block>
+                                <Block>
+                                    <Image
+                                        size='128x256'
+                                        src={ccSS}
+                                    />
+                                </Block>
+                                <Block>
+                                    <a href="https://culinary-connections-2a73fa545141.herokuapp.com" style={styles.links}>
+                                        Click here to go to my Deployed Application
+                                    </a>
+                                    <br></br>
+                                    <a href="https://github.com/frausto98/culinary_connection" style={styles.links}>
+                                        Click here to go to my GitHub Repository
+                                    </a>
+                                </Block>
+                            </Box>
+                        </Columns.Column>
+
+                        <Columns.Column size={3}>
+                            <Box style={styles.projects}>
+                                <Block>
+                                    This text is above the image
+                                </Block>
+                                <Block>
+                                    <Image
+                                        size='128x256'
+                                        src={dailyPlanner}
+                                    />
+                                </Block>
+                                <Block>
+                                    <a href="https://frausto98.github.io/daily-planner/" style={styles.links}>
+                                        Click here to go to my Deployed Application
+                                    </a>
+                                    <br></br>
+                                    <a href="https://github.com/frausto98/daily-planner" style={styles.links}>
+                                        Click here to go to my GitHub Repository
+                                    </a>
+                                </Block>
+                            </Box>
+                        </Columns.Column>
+                    </Columns>
+                ) : (
                     <h2> CLick button  to  reveal more! </h2>
                 )}
             </div>
