@@ -58,19 +58,26 @@ function MaybeContact() {
     // a hook is a function that allows us to do something with the component
     // a component is a function that returns JSX
 
-    const [userName, setName] = useState('')
-    const [userEmail, setEmail] = useState('')
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
     const handleInputChange = (e) => {
-        const { userName, userEmail, message } = e.target
-        if (userName === 'user_name') {
-            setName(userName)
-        } else if (userEmail === 'user_email') {
-            setEmail(userEmail)
-        } else {
-            setMessage(message)
-        }
+        // Getting the value and name of the input which triggered the change
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    // Based on the input type, we set the state of either email, username, and password
+    // TODO: Add an else statement to the end that will set the password to the value of 'inputValue'
+
+    if (inputType === 'user_email') {
+      setEmail(inputValue);
+    } else if (inputType === 'user_name') {
+      setName(inputValue);
+    } else {
+      setMessage(inputValue);
+    }
     }
 
     const form = useRef();
@@ -85,6 +92,11 @@ function MaybeContact() {
         'AwYjYAhO_wBjItUS4')
       .then((result) => {
           console.log(result.text);
+        //   console.log(name, email, message)
+        //   alert(`Thank you for your message, ${name}!`)
+          setName('')
+          setEmail('')
+          setMessage('')
       }, (error) => {
           console.log(error.text);
       });
@@ -121,11 +133,11 @@ function MaybeContact() {
 
                 <Columns>
                     <Columns.Column size={4} offset={4}>
-                        <Form.Field className="form" style={styles.form} onSubmit={sendEmail}>
+                        <Form.Field className="form" domRef={form} style={styles.form} onSubmit={sendEmail}>
                             <Form.Control>
                                 <div>
                                     <Form.Input
-                                        value={userName}
+                                        value={name}
                                         name="user_name"
                                         onChange={handleInputChange}
                                         type="text"
@@ -138,7 +150,7 @@ function MaybeContact() {
 
                                 <div>
                                     <Form.Input
-                                        value={userEmail}
+                                        value={email}
                                         name="user_email"
                                         onChange={handleInputChange}
                                         type="email"
