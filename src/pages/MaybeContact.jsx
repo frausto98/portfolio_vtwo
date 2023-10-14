@@ -6,7 +6,7 @@ const styles = {
     mainContainer: {
         background: 'DodgerBlue',
         padding: '20px',
-        
+
     },
     title: {
         background: 'DodgerBlue',
@@ -46,7 +46,7 @@ const styles = {
         padding: '20px',
         borderRadius: 10,
 
-    
+
     }
 
 
@@ -64,42 +64,42 @@ function MaybeContact() {
 
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
 
-    // Based on the input type, we set the state of either email, username, and password
-    // TODO: Add an else statement to the end that will set the password to the value of 'inputValue'
+        // Based on the input type, we set the state of either email, username, and password
+        // TODO: Add an else statement to the end that will set the password to the value of 'inputValue'
 
-    if (inputType === 'user_email') {
-      setEmail(inputValue);
-    } else if (inputType === 'user_name') {
-      setName(inputValue);
-    } else {
-      setMessage(inputValue);
-    }
+        if (inputType === 'user_email') {
+            setEmail(inputValue);
+        } else if (inputType === 'user_name') {
+            setName(inputValue);
+        } else {
+            setMessage(inputValue);
+        }
     }
 
     const form = useRef();
 
     const sendEmail = (e) => {
-    e.preventDefault();
+        e.preventDefault();
 
-    emailjs.sendForm(
-        'service_dr56wji',
-        'template_jgjujpw',
-        form.current,
-        'AwYjYAhO_wBjItUS4')
-      .then((result) => {
-          console.log(result.text);
-        //   console.log(name, email, message)
-        //   alert(`Thank you for your message, ${name}!`)
-          setName('')
-          setEmail('')
-          setMessage('')
-      }, (error) => {
-          console.log(error.text);
-      });
+        emailjs.sendForm(
+            'service_dr56wji',
+            'template_jgjujpw',
+            form.current,
+            'AwYjYAhO_wBjItUS4')
+            .then((result) => {
+                console.log(result.text);
+                console.log(name, email, message)
+                alert(`Thank you for your message, ${name}!`)
+                setName('')
+                setEmail('')
+                setMessage('')
+            }, (error) => {
+                console.log(error.text);
+            });
     }
 
     // const handleFormSubmit = (e) => {
@@ -133,7 +133,7 @@ function MaybeContact() {
 
                 <Columns>
                     <Columns.Column size={4} offset={4}>
-                        <Form.Field className="form" domRef={form} style={styles.form} onSubmit={sendEmail}>
+                        {/* <Form.Field className="form" domRef={form} style={styles.form} onSubmit={sendEmail}>
                             <Form.Control>
                                 <div>
                                     <Form.Input
@@ -176,7 +176,31 @@ function MaybeContact() {
                                     <Button type="submit" style={styles.button}>Send Message!</Button>
                                 </div>
                             </Form.Control>
-                        </Form.Field>
+                        </Form.Field> */}
+                        <form ref={form} onSubmit={sendEmail}>
+                            <label>Name</label>
+                            <input 
+                            value={name} 
+                            onChange={handleInputChange}
+                            type="text" 
+                            name="user_name" 
+                            />
+
+                            <label>Email</label>
+                            <input 
+                            value={email}
+                            onChange={handleInputChange}
+                            type="email" 
+                            name="user_email" />
+
+                            <label>Message</label>
+                            <textarea 
+                            value={message}
+                            onChange={handleInputChange}
+                            type="text"
+                            name="message" />
+                            <input type="submit" value="Send" />
+                        </form>
                     </Columns.Column>
                 </Columns>
             </div>
