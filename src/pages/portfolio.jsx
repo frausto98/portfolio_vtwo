@@ -256,15 +256,15 @@ function PortfolioPage() {
                                 <Block>
                                     <Image
                                         size='128x256'
-                                        src={pwGen}
+                                        src={"Hello World"}
                                     />
                                 </Block>
                                 <Block>
-                                    <a href="https://frausto98.github.io/password-gen-repo/" style={styles.links}>
+                                    <a href="" style={styles.links}>
                                         Click here to go to my Deployed Application
                                     </a>
                                     <br></br>
-                                    <a href="https://github.com/frausto98/password-gen-repo" style={styles.links}>
+                                    <a href="" style={styles.links}>
                                         Click here to go to my GitHub Repository
                                     </a>
                                 </Block>
@@ -279,15 +279,15 @@ function PortfolioPage() {
                                 <Block>
                                     <Image
                                         size='128x256'
-                                        src={ccSS}
+                                        src={"Hello World"}
                                     />
                                 </Block>
                                 <Block>
-                                    <a href="https://culinary-connections-2a73fa545141.herokuapp.com" style={styles.links}>
+                                    <a href="" style={styles.links}>
                                         Click here to go to my Deployed Application
                                     </a>
                                     <br></br>
-                                    <a href="https://github.com/frausto98/culinary_connection" style={styles.links}>
+                                    <a href="" style={styles.links}>
                                         Click here to go to my GitHub Repository
                                     </a>
                                 </Block>
@@ -302,15 +302,15 @@ function PortfolioPage() {
                                 <Block>
                                     <Image
                                         size='128x256'
-                                        src={dailyPlanner}
+                                        src={"Hello World"}
                                     />
                                 </Block>
                                 <Block>
-                                    <a href="https://frausto98.github.io/daily-planner/" style={styles.links}>
+                                    <a href="" style={styles.links}>
                                         Click here to go to my Deployed Application
                                     </a>
                                     <br></br>
-                                    <a href="https://github.com/frausto98/daily-planner" style={styles.links}>
+                                    <a href="" style={styles.links}>
                                         Click here to go to my GitHub Repository
                                     </a>
                                 </Block>

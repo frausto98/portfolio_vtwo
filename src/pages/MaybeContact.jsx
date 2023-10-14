@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Box, Block, Image, Columns, Form, Button } from "react-bulma-components";
+import emailjs from '@emailjs/browser'
 
 const styles = {
     mainContainer: {
@@ -57,29 +58,46 @@ function MaybeContact() {
     // a hook is a function that allows us to do something with the component
     // a component is a function that returns JSX
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
+    const [userName, setName] = useState('')
+    const [userEmail, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
     const handleInputChange = (e) => {
-        const { name, email, message } = e.target
-        if (name === 'name') {
-            setName(name)
-        } else if (email === 'email') {
-            setEmail(email)
+        const { userName, userEmail, message } = e.target
+        if (userName === 'user_name') {
+            setName(userName)
+        } else if (userEmail === 'user_email') {
+            setEmail(userEmail)
         } else {
             setMessage(message)
         }
     }
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault()
-        console.log(name, email, message)
-        alert(`Thank you for your message, ${name}!`)
-        setName('')
-        setEmail('')
-        setMessage('')
+    const form = useRef();
+
+    const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        'service_dr56wji',
+        'template_jgjujpw',
+        form.current,
+        'AwYjYAhO_wBjItUS4')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
     }
+
+    // const handleFormSubmit = (e) => {
+    //     e.preventDefault()
+    //     console.log(name, email, message)
+    //     alert(`Thank you for your message, ${name}!`)
+    //     setName('')
+    //     setEmail('')
+    //     setMessage('')
+    // }
 
 
     return (
@@ -103,12 +121,12 @@ function MaybeContact() {
 
                 <Columns>
                     <Columns.Column size={4} offset={4}>
-                        <Form.Field className="form" style={styles.form} onSubmit={handleFormSubmit}>
+                        <Form.Field className="form" style={styles.form} onSubmit={sendEmail}>
                             <Form.Control>
                                 <div>
                                     <Form.Input
-                                        value={name}
-                                        name="name"
+                                        value={userName}
+                                        name="user_name"
                                         onChange={handleInputChange}
                                         type="text"
                                         placeholder='Name'
@@ -120,10 +138,10 @@ function MaybeContact() {
 
                                 <div>
                                     <Form.Input
-                                        value={email}
-                                        name="email"
+                                        value={userEmail}
+                                        name="user_email"
                                         onChange={handleInputChange}
-                                        type="text"
+                                        type="email"
                                         placeholder='Email'
                                     />
                                 </div>
