@@ -39,6 +39,10 @@ const styles = {
         borderStyle: 'solid',
         borderWidth: '1px',
         padding: '10px',
+    },
+    iframeBox: {
+        width: '100%',
+        height: '75vh'
     }
 
 }
@@ -54,27 +58,27 @@ function MaybeResume() {
                         </h1>
                     </Columns.Column>
                 </Columns>
-                <Columns>
+                {/* <Columns>
                     <Columns.Column size={6} offset={3}>
                         <h1 style={styles.text}>
                             This is to read more more about my skills!
                         </h1>
                     </Columns.Column>
-                </Columns>
+                </Columns> */}
 
                 <Columns>
-                    <Columns.Column size={4} offset={4}>
+                    <Columns.Column size={6} offset={3}>
                         <div>
                             <Block >
-                                <p style={styles.paragraph}>
+                                {/* <p style={styles.paragraph}>
                                     Below is my resume as it currently stands. I have to adjust it to  reflect  the new skills I've developed for the  class.
-                                </p>
+                                </p> */}
                             </Block>
                             <Block>
-                                <Image
-                                    size='128x256'
-                                    src=''
-                                />
+                                
+                                <iframe style={styles.iframeBox} src='src/altFiles/Resume.pdf'>
+                                    
+                                </iframe>
                             </Block>
 
                         </div>
