@@ -76,9 +76,7 @@ function MaybeResume() {
                             </Block>
                             <Block>
                                 
-                                <iframe style={styles.iframeBox} src='src/altFiles/Resume.pdf'>
-                                    
-                                </iframe>
+                            <iframe style= {styles.iframeBox} src="https://docs.google.com/document/d/e/2PACX-1vQdbDHXeUvIbrLx4UwypuWYwBxmMDooYel1svnG8d0pmZlThPjJYBHdg7kK6OsvKb1xOgTfGnSS-Ej7/pub?embedded=true"></iframe>
                             </Block>
 
                         </div>
